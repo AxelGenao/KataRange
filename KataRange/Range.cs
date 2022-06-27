@@ -140,9 +140,14 @@ namespace KataRange
                 throw new NotImplementedException();
         }
 
-        public string Contains(string x)
+        public string Contains(string x, string y)
         {
+            var regex = new Regex(y);
+
             Range t1 = new Range(x);
+            string t = t1.Contains(x);
+            bool c = regex.IsMatch(t);
+            return c;
         }
     }
 }

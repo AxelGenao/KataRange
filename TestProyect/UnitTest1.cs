@@ -29,6 +29,19 @@ namespace TestProyect
 
             Assert.AreEqual(expected, actual);
         }
+        [TestMethod]
+        public void Contains()
+        {
+            string x = "(3,12)";
+            string y = "7, 8";
+            Range range = new Range(x);
+            bool expected = true;
+
+            string actual = range.Contains(x);
+
+            Assert.AreEqual(expected, actual);
+        }
+
 
     }
 }
